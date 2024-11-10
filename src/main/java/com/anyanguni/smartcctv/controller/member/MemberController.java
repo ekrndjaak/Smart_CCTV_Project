@@ -41,6 +41,11 @@ public class MemberController {
         return "member/result";
     }
 
+
+    @GetMapping("/test_here")
+    public String TestHere(){
+        return "member/test_here";
+    }
     @GetMapping("/member/find")
     public String find(){
         return "member/Find";

@@ -100,7 +100,7 @@
         <div class="col-md-9">
             <!-- CCTV 스트림을 표시할 부분 -->
             <div class="cctv-video">
-                <img id="videoStream" src="http://localhost:8000/video_feed" alt="CCTV Stream" style="width: 100%; height: 100%; object-fit: cover;">
+                <img id="videoStream" src="http://localhost:8001/process_video" alt="CCTV Stream" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
         </div>
         <div class="col-md-3">
@@ -125,7 +125,7 @@
         <p>마음이 편안합니다.<br>
             직장에서, 여행지에서, 언제 어디서나 집을 확인하세요.<br>
             PC 및 모든 기기에서 집안을 살펴볼 수 있습니다. HELPER은 SD 메모리 카드가 필요 없습니다.</p>
-        <a href="/test_here" class="btn btn-danger" onclick="onFallDetected()">낙상 감지 시뮬레이션</a>
+        <button id="simulationButton" class="btn btn-danger" onclick="toggleStream()">낙상 감지 시뮬레이션</button>
     </div>
 </div>
 
@@ -143,6 +143,7 @@
             })
             .catch(error => console.error("오류 발생:", error));
     }
+
 </script>
 
 </body>
